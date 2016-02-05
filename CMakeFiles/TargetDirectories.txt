@@ -1,0 +1,4 @@
+/home/dave/nsight/googletest/googlemock/CMakeFiles/gmock.dir
+/home/dave/nsight/googletest/googlemock/CMakeFiles/gmock_main.dir
+/home/dave/nsight/googletest/googlemock/gtest/CMakeFiles/gtest.dir
+/home/dave/nsight/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir
