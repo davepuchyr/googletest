@@ -306,6 +306,7 @@
 			</scannerInfoProvider>
 		</profile>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 		<buildTargets>
 			<target name="[lib] gtest" path="googlemock/gtest" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
@@ -554,21 +555,6 @@
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
 			</target>
-			<target name="Build" path="[Targets]/[lib] gmock_main" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
-				<buildCommand>/bin/gmake</buildCommand>
-				<buildArguments>-C "/home/dave/nsight/googletest" -j8</buildArguments>
-				<buildTarget>gmock_main</buildTarget>
-				<stopOnError>true</stopOnError>
-				<useDefaultCommand>false</useDefaultCommand>
-				<runAllBuilders>true</runAllBuilders>
-			</target>
-			<target name="Clean" path="[Targets]/[lib] gmock_main" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
-				<buildCommand>/usr/bin/cmake</buildCommand>
-				<buildArguments>-E chdir "/home/dave/nsight/googletest/googlemock" "/usr/bin/cmake" -P "CMakeFiles/gmock_main.dir/cmake_clean.cmake"</buildArguments>
-				<stopOnError>true</stopOnError>
-				<useDefaultCommand>false</useDefaultCommand>
-				<runAllBuilders>true</runAllBuilders>
-			</target>
 			<target name=": edit_cache" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 				<buildCommand>/bin/gmake</buildCommand>
 				<buildArguments>-j8</buildArguments>
@@ -657,6 +643,29 @@
 				<useDefaultCommand>true</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
 			</target>
+			<target name="gmock" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+				<buildCommand>/bin/gmake</buildCommand>
+				<buildArguments>-j8</buildArguments>
+				<buildTarget>gmock</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>true</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="Build" path="[Targets]/[lib] gmock_main" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+				<buildCommand>/bin/gmake</buildCommand>
+				<buildArguments>-C "/home/dave/nsight/googletest" -j8</buildArguments>
+				<buildTarget>gmock_main</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+			<target name="Clean" path="[Targets]/[lib] gmock_main" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+				<buildCommand>/usr/bin/cmake</buildCommand>
+				<buildArguments>-E chdir "/home/dave/nsight/googletest/googlemock" "/usr/bin/cmake" -P "CMakeFiles/gmock_main.dir/cmake_clean.cmake"</buildArguments>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
 			<target name="Build" path="[Targets]/[lib] gtest_main" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 				<buildCommand>/bin/gmake</buildCommand>
 				<buildArguments>-C "/home/dave/nsight/googletest" -j8</buildArguments>
@@ -674,5 +683,4 @@
 			</target>
 		</buildTargets>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 </cproject>
