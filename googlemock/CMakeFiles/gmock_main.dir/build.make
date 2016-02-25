@@ -35,88 +35,88 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dave/nsight/googletest
+CMAKE_SOURCE_DIR = /home/dave/nsight/panda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dave/nsight/googletest
+CMAKE_BINARY_DIR = /home/dave/nsight/panda
 
 # Include any dependencies generated for this target.
-include googlemock/CMakeFiles/gmock_main.dir/depend.make
+include lib/googletest/googlemock/CMakeFiles/gmock_main.dir/depend.make
 
 # Include the progress variables for this target.
-include googlemock/CMakeFiles/gmock_main.dir/progress.make
+include lib/googletest/googlemock/CMakeFiles/gmock_main.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include googlemock/CMakeFiles/gmock_main.dir/flags.make
+include lib/googletest/googlemock/CMakeFiles/gmock_main.dir/flags.make
 
-googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o: googlemock/CMakeFiles/gmock_main.dir/flags.make
-googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o: googletest/src/gtest-all.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dave/nsight/googletest/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o"
-	cd /home/dave/nsight/googletest/googlemock && /bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o -c /home/dave/nsight/googletest/googletest/src/gtest-all.cc
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/flags.make
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o: lib/googletest/googletest/src/gtest-all.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dave/nsight/panda/CMakeFiles $(CMAKE_PROGRESS_1)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o"
+	cd /home/dave/nsight/panda/lib/googletest/googlemock && /bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o -c /home/dave/nsight/panda/lib/googletest/googletest/src/gtest-all.cc
 
-googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.i: cmake_force
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.i"
-	cd /home/dave/nsight/googletest/googlemock && /bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dave/nsight/googletest/googletest/src/gtest-all.cc > CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.i
+	cd /home/dave/nsight/panda/lib/googletest/googlemock && /bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dave/nsight/panda/lib/googletest/googletest/src/gtest-all.cc > CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.i
 
-googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.s: cmake_force
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.s"
-	cd /home/dave/nsight/googletest/googlemock && /bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dave/nsight/googletest/googletest/src/gtest-all.cc -o CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.s
+	cd /home/dave/nsight/panda/lib/googletest/googlemock && /bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dave/nsight/panda/lib/googletest/googletest/src/gtest-all.cc -o CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.s
 
-googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.requires:
-.PHONY : googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.requires
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.requires:
+.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.requires
 
-googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.provides: googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.requires
-	$(MAKE) -f googlemock/CMakeFiles/gmock_main.dir/build.make googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.provides.build
-.PHONY : googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.provides
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.provides: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.requires
+	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.provides.build
+.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.provides
 
-googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.provides.build: googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.provides.build: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o
 
-googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o: googlemock/CMakeFiles/gmock_main.dir/flags.make
-googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o: googlemock/src/gmock-all.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dave/nsight/googletest/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o"
-	cd /home/dave/nsight/googletest/googlemock && /bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gmock_main.dir/src/gmock-all.cc.o -c /home/dave/nsight/googletest/googlemock/src/gmock-all.cc
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/flags.make
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o: lib/googletest/googlemock/src/gmock-all.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dave/nsight/panda/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o"
+	cd /home/dave/nsight/panda/lib/googletest/googlemock && /bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gmock_main.dir/src/gmock-all.cc.o -c /home/dave/nsight/panda/lib/googletest/googlemock/src/gmock-all.cc
 
-googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.i: cmake_force
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock_main.dir/src/gmock-all.cc.i"
-	cd /home/dave/nsight/googletest/googlemock && /bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dave/nsight/googletest/googlemock/src/gmock-all.cc > CMakeFiles/gmock_main.dir/src/gmock-all.cc.i
+	cd /home/dave/nsight/panda/lib/googletest/googlemock && /bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dave/nsight/panda/lib/googletest/googlemock/src/gmock-all.cc > CMakeFiles/gmock_main.dir/src/gmock-all.cc.i
 
-googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.s: cmake_force
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock_main.dir/src/gmock-all.cc.s"
-	cd /home/dave/nsight/googletest/googlemock && /bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dave/nsight/googletest/googlemock/src/gmock-all.cc -o CMakeFiles/gmock_main.dir/src/gmock-all.cc.s
+	cd /home/dave/nsight/panda/lib/googletest/googlemock && /bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dave/nsight/panda/lib/googletest/googlemock/src/gmock-all.cc -o CMakeFiles/gmock_main.dir/src/gmock-all.cc.s
 
-googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.requires:
-.PHONY : googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.requires
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.requires:
+.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.requires
 
-googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.provides: googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.requires
-	$(MAKE) -f googlemock/CMakeFiles/gmock_main.dir/build.make googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.provides.build
-.PHONY : googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.provides
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.provides: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.requires
+	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.provides.build
+.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.provides
 
-googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.provides.build: googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.provides.build: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o
 
-googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: googlemock/CMakeFiles/gmock_main.dir/flags.make
-googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: googlemock/src/gmock_main.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/dave/nsight/googletest/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
-	cd /home/dave/nsight/googletest/googlemock && /bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/dave/nsight/googletest/googlemock/src/gmock_main.cc
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/flags.make
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: lib/googletest/googlemock/src/gmock_main.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/dave/nsight/panda/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+	cd /home/dave/nsight/panda/lib/googletest/googlemock && /bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/dave/nsight/panda/lib/googletest/googlemock/src/gmock_main.cc
 
-googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.i: cmake_force
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock_main.dir/src/gmock_main.cc.i"
-	cd /home/dave/nsight/googletest/googlemock && /bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dave/nsight/googletest/googlemock/src/gmock_main.cc > CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
+	cd /home/dave/nsight/panda/lib/googletest/googlemock && /bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/dave/nsight/panda/lib/googletest/googlemock/src/gmock_main.cc > CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
 
-googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.s: cmake_force
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock_main.dir/src/gmock_main.cc.s"
-	cd /home/dave/nsight/googletest/googlemock && /bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dave/nsight/googletest/googlemock/src/gmock_main.cc -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
+	cd /home/dave/nsight/panda/lib/googletest/googlemock && /bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/dave/nsight/panda/lib/googletest/googlemock/src/gmock_main.cc -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
 
-googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.requires:
-.PHONY : googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.requires
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.requires:
+.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.requires
 
-googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.provides: googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.requires
-	$(MAKE) -f googlemock/CMakeFiles/gmock_main.dir/build.make googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.provides.build
-.PHONY : googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.provides
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.provides: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.requires
+	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.provides.build
+.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.provides
 
-googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.provides.build: googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.provides.build: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
 
 # Object files for target gmock_main
 gmock_main_OBJECTS = \
@@ -127,29 +127,29 @@ gmock_main_OBJECTS = \
 # External object files for target gmock_main
 gmock_main_EXTERNAL_OBJECTS =
 
-googlemock/libgmock_main.a: googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o
-googlemock/libgmock_main.a: googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o
-googlemock/libgmock_main.a: googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
-googlemock/libgmock_main.a: googlemock/CMakeFiles/gmock_main.dir/build.make
-googlemock/libgmock_main.a: googlemock/CMakeFiles/gmock_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libgmock_main.a"
-	cd /home/dave/nsight/googletest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
-	cd /home/dave/nsight/googletest/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock_main.dir/link.txt --verbose=$(VERBOSE)
+dist/lib/libgmock_main.a: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o
+dist/lib/libgmock_main.a: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o
+dist/lib/libgmock_main.a: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+dist/lib/libgmock_main.a: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make
+dist/lib/libgmock_main.a: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library ../../../dist/lib/libgmock_main.a"
+	cd /home/dave/nsight/panda/lib/googletest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
+	cd /home/dave/nsight/panda/lib/googletest/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock_main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-googlemock/CMakeFiles/gmock_main.dir/build: googlemock/libgmock_main.a
-.PHONY : googlemock/CMakeFiles/gmock_main.dir/build
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build: dist/lib/libgmock_main.a
+.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build
 
-googlemock/CMakeFiles/gmock_main.dir/requires: googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.requires
-googlemock/CMakeFiles/gmock_main.dir/requires: googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.requires
-googlemock/CMakeFiles/gmock_main.dir/requires: googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.requires
-.PHONY : googlemock/CMakeFiles/gmock_main.dir/requires
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/requires: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o.requires
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/requires: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o.requires
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/requires: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.requires
+.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/requires
 
-googlemock/CMakeFiles/gmock_main.dir/clean:
-	cd /home/dave/nsight/googletest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean.cmake
-.PHONY : googlemock/CMakeFiles/gmock_main.dir/clean
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
+	cd /home/dave/nsight/panda/lib/googletest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean.cmake
+.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
 
-googlemock/CMakeFiles/gmock_main.dir/depend:
-	cd /home/dave/nsight/googletest && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dave/nsight/googletest /home/dave/nsight/googletest/googlemock /home/dave/nsight/googletest /home/dave/nsight/googletest/googlemock /home/dave/nsight/googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : googlemock/CMakeFiles/gmock_main.dir/depend
+lib/googletest/googlemock/CMakeFiles/gmock_main.dir/depend:
+	cd /home/dave/nsight/panda && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dave/nsight/panda /home/dave/nsight/panda/lib/googletest/googlemock /home/dave/nsight/panda /home/dave/nsight/panda/lib/googletest/googlemock /home/dave/nsight/panda/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
 

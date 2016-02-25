@@ -43,18 +43,18 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dave/nsight/googletest
+CMAKE_SOURCE_DIR = /home/dave/nsight/panda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dave/nsight/googletest
+CMAKE_BINARY_DIR = /home/dave/nsight/panda
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -83,16 +83,6 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-.PHONY : install/strip/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -101,6 +91,26 @@ list_install_components:
 # Special rule for the target list_install_components
 list_install_components/fast: list_install_components
 .PHONY : list_install_components/fast
+
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/dave/nsight/panda && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/dave/nsight/panda && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/dave/nsight/panda/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -124,14 +134,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/dave/nsight/googletest && $(CMAKE_COMMAND) -E cmake_progress_start /home/dave/nsight/googletest/CMakeFiles /home/dave/nsight/googletest/googlemock/gtest/CMakeFiles/progress.marks
-	cd /home/dave/nsight/googletest && $(MAKE) -f CMakeFiles/Makefile2 googlemock/gtest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dave/nsight/googletest/CMakeFiles 0
+	cd /home/dave/nsight/panda && $(CMAKE_COMMAND) -E cmake_progress_start /home/dave/nsight/panda/CMakeFiles /home/dave/nsight/panda/lib/googletest/googlemock/gtest/CMakeFiles/progress.marks
+	cd /home/dave/nsight/panda && $(MAKE) -f CMakeFiles/Makefile2 lib/googletest/googlemock/gtest/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dave/nsight/panda/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/dave/nsight/googletest && $(MAKE) -f CMakeFiles/Makefile2 googlemock/gtest/clean
+	cd /home/dave/nsight/panda && $(MAKE) -f CMakeFiles/Makefile2 lib/googletest/googlemock/gtest/clean
 .PHONY : clean
 
 # The main clean target
@@ -140,45 +150,45 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/dave/nsight/googletest && $(MAKE) -f CMakeFiles/Makefile2 googlemock/gtest/preinstall
+	cd /home/dave/nsight/panda && $(MAKE) -f CMakeFiles/Makefile2 lib/googletest/googlemock/gtest/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/dave/nsight/googletest && $(MAKE) -f CMakeFiles/Makefile2 googlemock/gtest/preinstall
+	cd /home/dave/nsight/panda && $(MAKE) -f CMakeFiles/Makefile2 lib/googletest/googlemock/gtest/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/dave/nsight/googletest && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/dave/nsight/panda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-googlemock/gtest/CMakeFiles/gtest.dir/rule:
-	cd /home/dave/nsight/googletest && $(MAKE) -f CMakeFiles/Makefile2 googlemock/gtest/CMakeFiles/gtest.dir/rule
-.PHONY : googlemock/gtest/CMakeFiles/gtest.dir/rule
+lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/rule:
+	cd /home/dave/nsight/panda && $(MAKE) -f CMakeFiles/Makefile2 lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/rule
+.PHONY : lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
-gtest: googlemock/gtest/CMakeFiles/gtest.dir/rule
+gtest: lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/rule
 .PHONY : gtest
 
 # fast build rule for target.
 gtest/fast:
-	cd /home/dave/nsight/googletest && $(MAKE) -f googlemock/gtest/CMakeFiles/gtest.dir/build.make googlemock/gtest/CMakeFiles/gtest.dir/build
+	cd /home/dave/nsight/panda && $(MAKE) -f lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build.make lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 # Convenience name for target.
-googlemock/gtest/CMakeFiles/gtest_main.dir/rule:
-	cd /home/dave/nsight/googletest && $(MAKE) -f CMakeFiles/Makefile2 googlemock/gtest/CMakeFiles/gtest_main.dir/rule
-.PHONY : googlemock/gtest/CMakeFiles/gtest_main.dir/rule
+lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule:
+	cd /home/dave/nsight/panda && $(MAKE) -f CMakeFiles/Makefile2 lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
+.PHONY : lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
-gtest_main: googlemock/gtest/CMakeFiles/gtest_main.dir/rule
+gtest_main: lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
 .PHONY : gtest_main
 
 # fast build rule for target.
 gtest_main/fast:
-	cd /home/dave/nsight/googletest && $(MAKE) -f googlemock/gtest/CMakeFiles/gtest_main.dir/build.make googlemock/gtest/CMakeFiles/gtest_main.dir/build
+	cd /home/dave/nsight/panda && $(MAKE) -f lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 src/gtest-all.o: src/gtest-all.cc.o
@@ -186,7 +196,7 @@ src/gtest-all.o: src/gtest-all.cc.o
 
 # target to build an object file
 src/gtest-all.cc.o:
-	cd /home/dave/nsight/googletest && $(MAKE) -f googlemock/gtest/CMakeFiles/gtest.dir/build.make googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+	cd /home/dave/nsight/panda && $(MAKE) -f lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build.make lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
 .PHONY : src/gtest-all.cc.o
 
 src/gtest-all.i: src/gtest-all.cc.i
@@ -194,7 +204,7 @@ src/gtest-all.i: src/gtest-all.cc.i
 
 # target to preprocess a source file
 src/gtest-all.cc.i:
-	cd /home/dave/nsight/googletest && $(MAKE) -f googlemock/gtest/CMakeFiles/gtest.dir/build.make googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i
+	cd /home/dave/nsight/panda && $(MAKE) -f lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build.make lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i
 .PHONY : src/gtest-all.cc.i
 
 src/gtest-all.s: src/gtest-all.cc.s
@@ -202,7 +212,7 @@ src/gtest-all.s: src/gtest-all.cc.s
 
 # target to generate assembly for a file
 src/gtest-all.cc.s:
-	cd /home/dave/nsight/googletest && $(MAKE) -f googlemock/gtest/CMakeFiles/gtest.dir/build.make googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s
+	cd /home/dave/nsight/panda && $(MAKE) -f lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build.make lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s
 .PHONY : src/gtest-all.cc.s
 
 src/gtest_main.o: src/gtest_main.cc.o
@@ -210,7 +220,7 @@ src/gtest_main.o: src/gtest_main.cc.o
 
 # target to build an object file
 src/gtest_main.cc.o:
-	cd /home/dave/nsight/googletest && $(MAKE) -f googlemock/gtest/CMakeFiles/gtest_main.dir/build.make googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+	cd /home/dave/nsight/panda && $(MAKE) -f lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
 .PHONY : src/gtest_main.cc.o
 
 src/gtest_main.i: src/gtest_main.cc.i
@@ -218,7 +228,7 @@ src/gtest_main.i: src/gtest_main.cc.i
 
 # target to preprocess a source file
 src/gtest_main.cc.i:
-	cd /home/dave/nsight/googletest && $(MAKE) -f googlemock/gtest/CMakeFiles/gtest_main.dir/build.make googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
+	cd /home/dave/nsight/panda && $(MAKE) -f lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
 .PHONY : src/gtest_main.cc.i
 
 src/gtest_main.s: src/gtest_main.cc.s
@@ -226,7 +236,7 @@ src/gtest_main.s: src/gtest_main.cc.s
 
 # target to generate assembly for a file
 src/gtest_main.cc.s:
-	cd /home/dave/nsight/googletest && $(MAKE) -f googlemock/gtest/CMakeFiles/gtest_main.dir/build.make googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
+	cd /home/dave/nsight/panda && $(MAKE) -f lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
 .PHONY : src/gtest_main.cc.s
 
 # Help Target
@@ -240,8 +250,9 @@ help:
 	@echo "... gtest_main"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... src/gtest-all.o"
@@ -261,6 +272,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/dave/nsight/googletest && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/dave/nsight/panda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
