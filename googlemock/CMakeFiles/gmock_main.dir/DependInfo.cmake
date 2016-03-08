@@ -12,7 +12,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS
-  "BOOST_LOG_DYN_LINK=1"
+  "BOOST_ALL_DYN_LINK=1"
   )
 
 # Targets to which this target links.
